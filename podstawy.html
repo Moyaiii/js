@@ -9,12 +9,20 @@
 <body>
     <button onclick="pokazTekst()">pokazTekst</button>
     <p id="miejsceNaTekst"></p>
+    <img id="obrazek" src="https://picsum.photos/200/300">
+    <button onclick="przelaczObrazek()">Pokaż ukryj obrazek</button>
     <script>
     console.log("hello world");
-    document.getElementById('miejsceNaTekst').innerHTML =
+    function pokazTekst(){
+        document.getElementById('miejsceNaTekst').innerHTML =
     "Ten tekst znajdzie sie w akapicie";
-   
-   
+    }
+   function przelaczObrazek() {
+       if(document.getElementById('obrazek').style.display == "block")
+       document.getElementById('obrazek').style.display = "none";
+       else
+       document.getElementById('obrazek').style.display = "block";
+   }
    
    
    </script>
